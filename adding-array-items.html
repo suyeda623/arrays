@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2016 by suyeda623 (http://jsbin.com/yopewin/2/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+<body>
+
+<script id="jsbin-javascript">
+function addToList(list, item) {
+  list.push(item);
+  return list;
+}
+
+
+
+
+/* From here down, you are not expected to 
+   understand.... for now :)  
+   
+   
+   Nothing to see here!
+   
+*/
+
+
+// tests
+
+function testAddToList() {
+  
+  var input1 = ["red", "blue", "green"]
+  var input2 = "pink"
+  var expected = ["red", "blue", "green", "pink"]
+  var result = addToList(input1, input2);
+  
+  if (
+    result && result.length && expected.length === result.length &&
+    expected.every(function(item) {
+      return result.indexOf(item) > -1;
+    })) {
+    console.log('SUCCESS: `addToList` works!');
+  } else {
+    console.error('FAILURE: `addToList` is not working');
+  } 
+}
+
+testAddToList();
+
+</script>
+</body>
+</html>
